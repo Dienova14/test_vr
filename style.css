@@ -1,0 +1,351 @@
+/* ===========================
+   GLOBAL STYLE
+=========================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-area h2 {
+    color: #333;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transform: scale(2);
+    transform-origin: center;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #f29914;
+}
+
+
+/* ===========================
+   SEARCH BOX
+=========================== */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f2f2f2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    width: 140px;
+}
+
+.search-box button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-img {
+    width: 8px;
+    height: 8px;
+    object-fit: contain;
+}
+
+.search-box:hover {
+    background: #e9e9e9;
+}
+
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 50px;
+}
+
+.hero img {
+    width: 450px;
+    border-radius: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #D6B169;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #C49A6C;
+}
+
+
+/* ===========================
+   PRODUCT SECTION
+=========================== */
+.product-section {
+    padding: 40px 50px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.product-list::-webkit-scrollbar {
+    display: none;
+}
+
+.product-list {
+    scrollbar-width: none;
+}
+
+/* Product Card */
+.product-card {
+    flex: 0 0 230px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-body {
+    padding: 12px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #d7ac55;
+}
+
+.product-price span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #555;
+}
+
+.product-note {
+    font-size: 12px;
+    color: #777;
+}
+
+.btn-detail {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #D6B169;
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-detail:hover {
+    background: #C49A6C;
+}
+
+
+/* ===========================
+   TESTIMONI (JIKA DIPAKAI)
+=========================== */
+.testi-box {
+    background-color: #F5F5F5;
+    padding: 40px;
+    margin: 40px 50px;
+    border-radius: 12px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: #f9f9f9;
+    padding: 50px 20px 0;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Footer Titles */
+.footer-section h3 {
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Footer Nav */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 0.6;
+}
+
+/* Share */
+.share-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.8;
+}
+
+.share-icons img {
+    width: 18px;
+}
+
+/* Social Icons */
+.social-icons a img {
+    width: 22px;
+    margin-right: 12px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.social-icons a img:hover {
+    opacity: 0.5;
+}
+
+/* Contact Section */
+.contact-clean .contact-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-clean img {
+    width: 20px;
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
+.contact-clean p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    border-top: 1px solid #e4e4e4;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 0;
+}
