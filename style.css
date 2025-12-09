@@ -914,215 +914,336 @@ body {
 ================================ */
 @media (max-width: 600px) {
 
-    /* GLOBAL */
+    /* =================
+       GLOBAL
+    ================= */
     body {
         overflow-x: hidden;
+        padding-top: 99px;
     }
 
-    /* NAVBAR */
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* =================
+       NAVBAR
+    ================= */
     .navbar {
-        padding: 14px 18px;
+        padding: 25px 18px;
         flex-direction: column;
         gap: 10px;
-        position: relative;
-        padding-bottom: 6px;
-        padding-top: 30px;
+        position: fixed; /* TETAP FIXED */
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(8px);
     }
+
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .navbar nav a {
-        margin: 0 15px;
+        margin: 6px 10px;
         font-size: 13px;
     }
+
     .btn-download {
-        margin-top: 15px;
+        margin-top: 8px;
         padding: 8px 16px;
         font-size: 13px;
     }
 
-    /* HERO */
+    /* =================
+       HERO
+    ================= */
     .hero {
-        height: 75vh;
-        padding: 0 20px;
+        height: 90vh;
+        padding: 140px 20px 80px;
+        margin-top: 0;
     }
+
     .hero-content h1 {
         font-size: 42px;
     }
+
     .hero-content h2 {
         font-size: 38px;
         margin-top: -4px;
     }
+
     .desc {
         font-size: 14px;
     }
+
     .hero-btn {
         flex-direction: column;
         gap: 14px;
         margin-top: 25px;
     }
+
     .btn-produk,
     .btn-konsultasi {
         width: 100%;
     }
 
-    /* NEW SECTION */
+    /* =================
+       TREND SECTION
+    ================= */
     .trend-section {
         height: auto;
-        padding: 40px 20px;
+        padding: 60px 20px;
     }
+
     .trend-container {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
+
     .trend-left h2 {
         font-size: 30px;
     }
+
     .trend-left .desc {
         max-width: 100%;
-    }
-    .trend-right img {
-        width: 100%;
-        height: 280px;
+        text-align: justify;
     }
 
-    /* COLLECTION */
-    .collection-wrapper {
-        padding: 20px;
+    .trend-list {
+        text-align: justify;
     }
+
+    .trend-list li {
+        font-size: 16px;
+    }
+
+    .trend-right img {
+        width: 100%;
+        height: 260px;
+    }
+
+    /* =================
+       COLLECTION (TAB FIX)
+    ================= */
+    .collection-wrapper {
+        padding: 40px 20px;
+    }
+
     .section-title {
         font-size: 30px;
     }
 
     .tab-nav {
-        flex-wrap: wrap;
-        padding: 4px 6px;
-        gap: 4px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 10px;
+
+        padding: 6px;
+        margin: 0 auto 30px;
+
+        background: #1a1a1a;
+        border-radius: 50px;
+
+        overflow-x: auto;
+        scrollbar-width: none;
     }
-    .tab-btn {
-        padding: 8px 18px;
-        font-size: 13px;
+    .tab-nav::-webkit-scrollbar {
+        display: none;
     }
 
-    .collection-grid {
+    .tab-btn {
+        width: 100%;
+        height: 42px;
+        padding: 0 5px;
+
+        font-size: 10px;
+        font-weight: 500;
+
+        border-radius: 999px;
+        white-space: nowrap;
+
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
+
+    /* TAB LOGIC PENTING */
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        background: #111;
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+
     .collection-card {
         width: 100%;
         max-width: 330px;
     }
 
-    /* STYLE FINDER */
+    /* =================
+       STYLE FINDER
+    ================= */
     .style-finder {
-        padding: 0 20px;
+        padding: 40px 20px;
         height: auto;
-        margin-top: 60px;
     }
+
     .style-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
     }
+
     .style-title {
         font-size: 30px;
     }
+
     .style-subtitle {
         font-size: 13px;
         max-width: 100%;
     }
 
     .style-tabs {
-        flex-wrap: wrap;
-        gap: 6px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 10px;
+
+        background: #1a1a1a;
+        padding: 6px;
+        border-radius: 50px;
+
+        overflow-x: auto;
+        scrollbar-width: none;
     }
+
+    .style-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+
     .style-tab {
-        padding: 6px 18px;
-        font-size: 13px;
+        height: 36px;                 /* ↓ dari 40 */
+        padding: 0 16px;              /* seimbang kiri-kanan */
+        
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+
+        border-radius: 999px;
+        white-space: nowrap;
+
+        background: transparent;
+        color: #aaa;
+        border: none;
+        cursor: pointer;
+
+        transition: 0.25s ease;
     }
 
     .style-display {
         margin-top: 30px;
     }
+
     .style-img {
         height: 260px;
     }
 
-    /* OVERLAY */
     .overlay-title {
         font-size: 20px;
     }
+
     .overlay-desc {
         font-size: 13px;
     }
 
-    /* FEATURES */
+    /* =================
+       FORM SECTION
+    ================= */
+    .project-section {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .project-card.wide {
+        padding: 28px 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* =================
+       FEATURES
+    ================= */
     .features {
-        padding: 40px 0;
-        grid-template-columns: 2fr;
+        padding: 40px 20px;
         gap: 30px;
     }
+
     .feature-item {
         width: 150px;
     }
+
     .icon-wrapper {
         width: 60px;
         height: 60px;
     }
+
     .icon {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
+
     .feature-item h3 {
         font-size: 16px;
     }
 
-    /* FOOTER */
+    /* =================
+       FOOTER
+    ================= */
     .main-footer {
-        padding: 35px 20px;
+        padding: 40px 20px;
         flex-direction: column;
-        gap: 35px;
+        gap: 30px;
+        text-align: center;
     }
 
-    /* Left */
-    .footer-left {
-        padding-left: 0;
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        padding: 0;
     }
+
     .footer-logo {
         font-size: 26px;
-        text-align: center;
     }
+
     .footer-about {
-        text-align: center;
-        max-width: 100%;
         font-size: 13px;
+        max-width: 100%;
     }
 
-    /* Social */
-    .footer-center {
-        text-align: center;
-    }
-
-    .footer-social {
-        align-items: center;
-    }
-
-    .social-item {
+    .footer-icons {
         justify-content: center;
-        gap: 12px;
-        font-size: 14px;
     }
 
-    .social-item i {
-        font-size: 18px;
-    }
-
-    /* Maps */
-    .footer-right {
-        width: 100%;
-    }
     .map-box {
         height: 200px;
     }
+
     .footer-right p {
         text-align: center;
     }
